@@ -48,8 +48,6 @@ void setup() {
     String portName = Serial.list()[0];
     println(portName);
     comPort = new Serial(this, portName, 9600);
-    comPort.write(0x4);
-    sendBuffer = "0x4";
   }
 }
 
@@ -154,6 +152,10 @@ void serialEvent(Serial myPort) {
     else {
       recvBuffer[readingPos] = val;
       readingPos++;
+      if (readingPos == 1) {
+        comPort.write(0x4);
+        sendBuffer = "0x4";
+      }
     }    
   }
   else {    
@@ -207,10 +209,10 @@ void mousePressed() {
   else if (mousePressedFP3() == true) { comPort.write((17<<3) | 0x1); sendBuffer = "0x1 0000 0000 0000 0010 0000 0000 0000 0000"; } 
   else if (mousePressedFP2() == true) { comPort.write((18<<3) | 0x1); sendBuffer = "0x1 0000 0000 0000 0100 0000 0000 0000 0000"; } 
   else if (mousePressedFP1() == true) { comPort.write((19<<3) | 0x1); sendBuffer = "0x1 0000 0000 0000 1000 0000 0000 0000 0000"; }       
-  else if (mousePressedFCA() == true) { comPort.write((20<<3) | 0x1); sendBuffer = "0x1 0000 0000 0001 0000 0000 0000 0000 0000"; } 
+  else if (mousePressedFRM() == true) { comPort.write((20<<3) | 0x1); sendBuffer = "0x1 0000 0000 0001 0000 0000 0000 0000 0000"; } 
   else if (mousePressedFPS() == true) { comPort.write((21<<3) | 0x1); sendBuffer = "0x1 0000 0000 0010 0000 0000 0000 0000 0000"; }   
   else if (mousePressedFMM() == true) { comPort.write((22<<3) | 0x1); sendBuffer = "0x1 0000 0000 0100 0000 0000 0000 0000 0000"; } 
-  else if (mousePressedFRM() == true) { comPort.write((23<<3) | 0x1); sendBuffer = "0x1 0000 0000 1000 0000 0000 0000 0000 0000"; }  
+  else if (mousePressedFCA() == true) { comPort.write((23<<3) | 0x1); sendBuffer = "0x1 0000 0000 1000 0000 0000 0000 0000 0000"; }  
   else if (mousePressedLLB() == true) { comPort.write((24<<3) | 0x1); sendBuffer = "0x1 0000 0001 0000 0000 0000 0000 0000 0000"; }
   else if (mousePressedLLR() == true) { comPort.write((25<<3) | 0x1); sendBuffer = "0x1 0000 0010 0000 0000 0000 0000 0000 0000"; } 
   else if (mousePressedLLL() == true) { comPort.write((26<<3) | 0x1); sendBuffer = "0x1 0000 0100 0000 0000 0000 0000 0000 0000"; }
