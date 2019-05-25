@@ -167,14 +167,17 @@ void serialEvent(Serial myPort) {
       if (receiving) {
         readingPos = 0;
       } 
-      else if (recvBuffer[0] == 'A') { led1 = true; led2 = false; led3 = false; led4 = false; }
-      else if (recvBuffer[0] == 'B') { led1 = false; led2 = true; led3 = false; led4 = false; }
-      else if (recvBuffer[0] == 'C') { led1 = false; led2 = false; led3 = true; led4 = false; }
-      else if (recvBuffer[0] == 'D') { led1 = false; led2 = false; led3 = false; led4 = true; }
-      else if (recvBuffer[0] == 'E') { freeMemory = getReceivedNumber(); }
+      else if (recvBuffer[0] == 'G') { led1 = true; led2 = false; led3 = false; led4 = false; }
+      else if (recvBuffer[0] == 'H') { led1 = false; led2 = true; led3 = false; led4 = false; }
+      else if (recvBuffer[0] == 'I') { led1 = false; led2 = false; led3 = true; led4 = false; }
+      else if (recvBuffer[0] == 'J') { led1 = false; led2 = false; led3 = false; led4 = true; }
+      else if (recvBuffer[0] == 'K') { freeMemory = getReceivedNumber(); }
       else {
-        int motor = recvBuffer[0] - '0';    
-        if (motor >= 0 && motor < NUMSERVOS) {
+        int motor = recvBuffer[0] - '0';
+        if (recvBuffer[0] >= 'A' && recvBuffer[0] <= 'F') {
+          motor = 10 + (recvBuffer[0] - 'A');
+        }
+        if (motor >= 0 && motor < NUMSERVOS) {  
           positionBuffer[motor] = getReceivedNumber();
         }
       }  
