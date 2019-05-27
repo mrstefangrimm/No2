@@ -57,23 +57,32 @@ void draw() {
   // Output LEDs
   if (led1) fill(color(0, 255, 0));
   else fill(200);
-  rect(600, 150, 40, 40);
+  circle(620, 170, 40);
   if (led2) fill(color(0, 0, 255));
   else fill(200);
-  rect(650, 150, 40, 40);
+  circle(670, 170, 40);
   if (led3) fill(color(255, 0, 0));
   else fill(200);
-  rect(700, 150, 40, 40);
+  circle(720, 170, 40);
   if (led4) fill(color(255, 255, 0));
   else fill(200);
-  rect(700, 200, 40, 40);
+  circle(720, 220, 40);
   
   // Function keys
-  fill(200);
+  fill(color(0, 255, 0));
   rect(50, 500, 40, 40);
+  fill(color(0, 0, 255));
   rect(50, 550, 40, 40);
+  fill(color(255, 0, 0));
   rect(50, 600, 40, 40);
+  fill(color(255, 255, 0));
   rect(100, 600, 40, 40);
+  fill(0);
+  text("M",  65, 530);
+  text("P",  65, 580);
+  text("R",  65, 630);
+  text("C", 115, 630);
+  fill(200);
   
   // Program keys
   rect(100, 550, 40, 40);
@@ -84,6 +93,16 @@ void draw() {
   rect(350, 550, 40, 40);
   rect(400, 550, 40, 40);
   rect(450, 550, 40, 40);
+  fill(0);
+  text("1", 115, 580);
+  text("2", 165, 580);
+  text("3", 215, 580);
+  text("4", 265, 580);
+  text("5", 315, 580);
+  text("6", 365, 580);
+  text("7", 415, 580);
+  text("8", 465, 580);
+  fill(200);
   
   // left lower
   rect(150, 250, 40, 40);
