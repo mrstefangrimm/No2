@@ -3,6 +3,8 @@ No2 is a motion phantom with 3 motion axes which are controlled independently fo
 
 ![No2 Motion Phantom](No2-Photo-Small-BW.png  "")
 
+A [video on youtube](https://youtu.be/QqYBeX8754M) shows how the phantom works.
+
 ## Project History
 The project has been launched in 2019.
 
