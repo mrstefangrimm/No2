@@ -1,5 +1,5 @@
 # No2
-No2 is a motion phantom with 3 motion axes which are controlled independently in both linear and rotary motion.
+No2 is a motion phantom with 3 motion axes which are controlled independently for both linear and rotary motion.
 
 ![No2 Motion Phantom](No2-Photo-Small-BW.png  "")
 
