@@ -12,16 +12,12 @@ The project was launched in 2019. In 2020, the software for the phantom has been
 
 A detailed description how to build this phantom is published on *[Instructables.com](https://www.instructables.com/id/Liver-Deformation-X-Ray-Imaging-Phantom/)*.
 
-## Tool Chain
+## Manufacturing Tool Chain
 
 Software | License 
 ---- | -------
 SketchUp | SketchUp Shop 
 Ultimaker Cura | GPL
-
-Device | License 
----- | -------
-LnR-Actuator | CC BY-SA
 
 ## License
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
