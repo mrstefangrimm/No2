@@ -10,7 +10,7 @@ In the field of medical imaging, so called imaging phantoms are used  to evaluat
 
 The inspiration for this project was this video on YouTube: ELPHA: Dynamically deforming liver phantom. https://youtu.be/u_GXM9yy9Ok
 
-On an X-Ray image, the material and the density define what is a  bone, a liver or a lung. To simulate the deformation of a liver, an object of a different density than the density of the surrounding structure is needed. Different densities can also be achieved by 3D printed parts with different infill percentages. For this phantom, the printed parts that represent the liver have 60%, the part that represents the gall bladder 90% and the surrounding tissue has a 30% infill percentage.
+On an X-Ray image, the material and the density define what is a  bone, a liver or a lung. To simulate the deformation of a liver, an object of a different density than the density of the surrounding structure is needed. Different densities can also be achieved by 3D printed parts with different infill percentages. For this phantom, the printed parts that represent the liver have 60%, the part that represents the gall bladder 90% and the surrounding tissue has a 30% infill percentage. Check out the [interactive 3D model](https://liverphantom.netlify.app/).
 
 Whereas the above mentioned ELPHA uses pressure for the deformation, this phantom simulates the  deformation by moving objects relative to each other which together represent a liver. When the left and right cylinder are moved against each other, the liver "shrinks". When the cylinders are moved in opposite direction the liver gets bigger.
 
